@@ -7,7 +7,7 @@ window.onload = () => {
 
 const init = () => {
   window.top.addEventListener("message", (event) => {
-    if (event.data.sender && event.data.sender === "theParent") {
+    if (event.data && event.data.sender && event.data.sender === "theParent") {
       if (!isParentInitialized) {
         if (event.data.isInialized) {
           console.log("The parent has initialized.");

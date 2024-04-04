@@ -1,5 +1,5 @@
 window.top.addEventListener("message", (message) => {
-  if (message.data.sender === "childIframe") {
+  if (message.data.sender && message.data.sender === "childIframe") {
     console.log(`The child is initialized with url: ${message.data.url}.`);
   }
 });
