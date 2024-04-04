@@ -11,15 +11,5 @@ setTimeout(() => {
     sender: "theParent",
     isInialized: true,
   });
-  init();
-}, 2000);
 
-const init = () => {
-  const button = document.createElement("button");
-  button.classList.add("custom-button");
-  button.textContent = "Make child do something.";
-  window.document.body.appendChild(button);
-  button.onclick = () => {
-    window.top.postMessage({ sender: "theParent", action: 'do_smth' }, "*");
-  };
-};
+}, 2000);
